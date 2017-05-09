@@ -4,10 +4,17 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
 	prism:ViewModelLocator.AutowireViewModel="True"
 	Title="{Binding Title}"
+	xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+	xmlns:appBehaviors="clr-namespace:Behaviors;assembly=SmoothHeader"
 	BackgroundColor="#2980b9"
 	x:Class="SmoothHeader.Views.MainPage">
 
 	<ScrollView>
+
+		<ScrollView.Behaviors>
+			<b:EventToCommandBehavior EventName="Scrolled" Command="{Binding ScreenIsScrollingCommand}"
+                                      EventArgsParameterPath="ScrollY" />
+		</ScrollView.Behaviors>
 
 	<StackLayout Spacing="10" Margin="0,50,0,0">
 
@@ -19,7 +26,13 @@
 				Source="{Binding PlayerImage}"
 				HorizontalOptions="Fill"
 				HeightRequest="120"
-				Aspect="AspectFit"/>
+				Aspect="AspectFit">
+
+				<Image.Behaviors>
+					<appBehaviors:SwipeViewAutomaticallyBehavior ScrollData="{Binding ScreenPosition}"/>
+				</Image.Behaviors>
+
+			</Image>
 					
 		</StackLayout>
 

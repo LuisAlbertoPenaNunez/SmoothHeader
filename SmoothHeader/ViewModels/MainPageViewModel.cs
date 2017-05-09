@@ -4,6 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Prism.Navigation;
+using System.Windows.Input;
+using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace SmoothHeader.ViewModels
 {
@@ -15,9 +18,18 @@ namespace SmoothHeader.ViewModels
 
 		public string PlayerName { get; set; }
 
+		public ICommand ScreenIsScrollingCommand { get; set; }
+
+		public double ScreenPosition { get; set; }
+
 		public MainPageViewModel()
 		{
+			ScreenIsScrollingCommand = new Command<double>(OnScreenIsScrolling);
+		}
 
+		void OnScreenIsScrolling(double position)
+		{
+			ScreenPosition = position;
 		}
 
 		public void OnNavigatedFrom(NavigationParameters parameters)
