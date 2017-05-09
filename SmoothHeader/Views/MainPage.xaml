@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+	prism:ViewModelLocator.AutowireViewModel="True"
+	Title="{Binding Title}"
+	BackgroundColor="#2980b9"
+	x:Class="SmoothHeader.Views.MainPage">
+
+	<ScrollView>
+
+	<StackLayout Spacing="10" Margin="0,50,0,0">
+
+	<StackLayout Orientation="Horizontal" Spacing="10">
+
+		<StackLayout HorizontalOptions="Start">
+
+			<Image
+				Source="{Binding PlayerImage}"
+				HorizontalOptions="Fill"
+				HeightRequest="120"
+				Aspect="AspectFit"/>
+					
+		</StackLayout>
+
+		<StackLayout HorizontalOptions="FillAndExpand">
+
+			<StackLayout HorizontalOptions="CenterAndExpand"
+						VerticalOptions="CenterAndExpand">
+
+			<Label
+				Text="{Binding PlayerName}"
+				FontAttributes="Bold"
+				TextColor="White"/>
+
+			<Button BorderColor="White"
+					BackgroundColor="#3498db"
+					FontAttributes="Bold"
+					TextColor="White"
+					Text="Follow +"/>
+						
+			</StackLayout>
+
+		</StackLayout>
+				
+	</StackLayout>
+
+	<Grid Padding="10,0,0,0">
+
+		<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		
+		<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<StackLayout Grid.Column="0" Grid.Row="0">
+
+			<Label Text="2016-2017" TextColor="White" FontSize="12"/>
+					
+		</StackLayout>
+
+		<StackLayout Grid.Column="1" Grid.Row="0">
+		<Label Text="PPG" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="2" Grid.Row="0">
+		<Label Text="RPG" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="3" Grid.Row="0">
+		<Label Text="APG" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="4" Grid.Row="0">
+		<Label Text="STL" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="0" Grid.Row="1">
+		<Label Text="POSTSEASON" TextColor="White" FontAttributes="Bold" FontSize="20" />
+		</StackLayout>
+
+		<StackLayout Grid.Column="1" Grid.Row="1">
+		<Label Text="12.3" TextColor="White" FontAttributes="Bold" FontSize="20"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="2" Grid.Row="1">
+		<Label Text="6.5" TextColor="White" FontAttributes="Bold" FontSize="20"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="3" Grid.Row="1">
+		<Label Text="1.4" TextColor="White" FontAttributes="Bold" FontSize="20"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="4" Grid.Row="1">
+		<Label Text="0.4" TextColor="White" FontAttributes="Bold" FontSize="20"/>
+		</StackLayout>
+
+
+
+				
+		<StackLayout Grid.Column="0" Grid.Row="2">
+		<Label Text="CAREER STATS" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="1" Grid.Row="2">
+		<Label Text="12" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="2" Grid.Row="2">
+		<Label Text="7.3" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="3" Grid.Row="2">
+		<Label Text="0.6" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+		<StackLayout Grid.Column="4" Grid.Row="2">
+		<Label Text="0.4" TextColor="White" FontSize="12"/>
+		</StackLayout>
+
+	</Grid>
+
+	<BoxView
+		HorizontalOptions="FillAndExpand"
+		HeightRequest="200"
+		Color="#34495e"/>
+
+	<BoxView
+		HorizontalOptions="FillAndExpand"
+		HeightRequest="200"
+		Color="#2c3e50"/>
+
+	<BoxView
+		HorizontalOptions="FillAndExpand"
+		HeightRequest="200"
+		Color="#e67e22"/>
+
+	<BoxView
+		HorizontalOptions="FillAndExpand"
+		HeightRequest="200"
+		Color="#d35400"/>
+
+	</StackLayout>
+
+	</ScrollView>
+	
+</ContentPage>
