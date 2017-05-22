@@ -1,7 +1,9 @@
 ﻿using Prism.Unity;
 using SmoothHeader.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SmoothHeader
 {
 	public partial class App : PrismApplication

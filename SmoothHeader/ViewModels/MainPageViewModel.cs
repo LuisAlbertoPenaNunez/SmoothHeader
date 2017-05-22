@@ -7,6 +7,7 @@ using Prism.Navigation;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System.Diagnostics;
+using SmoothHeader.Views.Views;
 
 namespace SmoothHeader.ViewModels
 {
@@ -21,6 +22,8 @@ namespace SmoothHeader.ViewModels
 		public ICommand ScreenIsScrollingCommand { get; set; }
 
 		public double ScreenPosition { get; set; }
+
+        public IList<string> PlayerData { get; set; }
 
 		public MainPageViewModel()
 		{
@@ -37,14 +40,26 @@ namespace SmoothHeader.ViewModels
 			
 		}
 
-		public void OnNavigatedTo(NavigationParameters parameters)
-		{
-			Title = "Smooth Header";
+        public void OnNavigatedTo(NavigationParameters parameters)
+        {
+            Title = "Smooth Header";
 
-			PlayerImage = "http://www.forums.nba-live.com/dl_mod/thumbs/3638_MIA_James_LeBron.png";
+            PlayerImage = "http://www.forums.nba-live.com/dl_mod/thumbs/3638_MIA_James_LeBron.png";
 
-			PlayerName = "Serge Ibanka";
-		}
+            PlayerName = "Serge Ibanka";
+
+            PlayerData = new List<string>
+            {
+                "Born",
+                "12/09/2001",
+                "Age",
+                "25",
+                "From",
+                "Draft",
+                "Nba Debut",
+                "2014"
+            };
+        }
 
 		public void OnNavigatingTo(NavigationParameters parameters)
 		{
