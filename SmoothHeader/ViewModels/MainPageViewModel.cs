@@ -1,4 +1,4 @@
-﻿using Prism.Commands;
+﻿﻿using Prism.Commands;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -42,11 +42,11 @@ namespace SmoothHeader.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-            Title = "Smooth Header";
+            Title = "#9 Langston Galloway";
 
-            PlayerImage = "http://www.forums.nba-live.com/dl_mod/thumbs/3638_MIA_James_LeBron.png";
+            PlayerImage = "https://sxmfeed.files.wordpress.com/2016/09/kevin-durant1.png";
 
-            PlayerName = "Serge Ibanka";
+            PlayerName = "Kevin Durant";
 
             PlayerData = new List<string>
             {

@@ -22,7 +22,7 @@
 
 	<StackLayout Orientation="Horizontal" Padding="0,50,0,0" Spacing="10" BackgroundColor="#2980b9">
 
-		<StackLayout HorizontalOptions="Start">
+		<StackLayout HorizontalOptions="Start" Padding="20,0,0,0">
 
 			<Image
 				Source="{Binding PlayerImage}"
@@ -46,11 +46,15 @@
 			<Label
 				Text="{Binding PlayerName}"
 				FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand"
+                FontSize="20"
 				TextColor="White"/>
 
 			<Button BorderColor="White"
+                    HorizontalOptions="CenterAndExpand"
 					BackgroundColor="#3498db"
 					FontAttributes="Bold"
+                    WidthRequest="150"
 					TextColor="White"
 					Text="Follow +"/>
 						
