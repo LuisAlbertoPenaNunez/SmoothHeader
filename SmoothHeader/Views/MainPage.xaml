@@ -4,7 +4,7 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
 	prism:ViewModelLocator.AutowireViewModel="True"
 	Title="{Binding Title}"
-    BackgroundColor="White"
+    BackgroundColor="#80DCDCDC"
 	xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
 	xmlns:appBehaviors="clr-namespace:Behaviors;assembly=SmoothHeader"
     xmlns:components="clr-namespace:SmoothHeader.Component;assembly=SmoothHeader"
@@ -65,7 +65,8 @@
 		<Grid.RowDefinitions>
 				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="1"/>
+                    
 		</Grid.RowDefinitions>
 		
 		<Grid.ColumnDefinitions>
@@ -75,6 +76,13 @@
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
+
+
+                <BoxView HeightRequest="1"
+                    Color="White" 
+                    Grid.Row="2" 
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
 
 		<StackLayout Grid.Column="0" Grid.Row="0">
 
@@ -102,10 +110,12 @@
 		<Label Text="POSTSEASON" TextColor="White" FontAttributes="Bold" FontSize="20" />
 		</StackLayout>
 
+                
+
 		<StackLayout Grid.Column="1" Grid.Row="1">
 		<Label Text="12.3" TextColor="White" FontAttributes="Bold" FontSize="20"/>
 		</StackLayout>
-
+  
 		<StackLayout Grid.Column="2" Grid.Row="1">
 		<Label Text="6.5" TextColor="White" FontAttributes="Bold" FontSize="20"/>
 		</StackLayout>
@@ -121,37 +131,42 @@
 
 
 				
-		<StackLayout Grid.Column="0" Grid.Row="2">
+		<StackLayout Grid.Column="0" Grid.Row="3">
 		<Label Text="CAREER STATS" TextColor="White" FontSize="12"/>
 		</StackLayout>
 
-		<StackLayout Grid.Column="1" Grid.Row="2">
+		<StackLayout Grid.Column="1" Grid.Row="3">
 		<Label Text="12" TextColor="White" FontSize="12"/>
 		</StackLayout>
 
-		<StackLayout Grid.Column="2" Grid.Row="2">
+		<StackLayout Grid.Column="2" Grid.Row="3">
 		<Label Text="7.3" TextColor="White" FontSize="12"/>
 		</StackLayout>
 
-		<StackLayout Grid.Column="3" Grid.Row="2">
+		<StackLayout Grid.Column="3" Grid.Row="3">
 		<Label Text="0.6" TextColor="White" FontSize="12"/>
 		</StackLayout>
 
-		<StackLayout Grid.Column="4" Grid.Row="2">
+		<StackLayout Grid.Column="4" Grid.Row="3">
 		<Label Text="0.4" TextColor="White" FontSize="12"/>
 		</StackLayout>
 
 	</Grid>
+ 
+    <StackLayout BackgroundColor="White">
 
-    <Image Source="http://i2.cdn.turner.com/money/dam/assets/151223011223-nesquik-ad-780x439.jpg"
+        <Image Source="http://i2.cdn.turner.com/money/dam/assets/151223011223-nesquik-ad-780x439.jpg"
             HorizontalOptions="FillAndExpand"
-                Aspect="Fill"
-                Margin="30"
+            Aspect="Fill"
+            Margin="30"
             HeightRequest="60"/>
+
+    </StackLayout>
 
             
 	<Grid
-        Margin="0,40,0,0"
+                BackgroundColor="White"
+        Padding="0,40,0,0"
 		HorizontalOptions="FillAndExpand">
 
       <Grid.RowDefinitions>
@@ -168,36 +183,36 @@
                     VerticalOptions="FillAndExpand"
                     Grid.Row="0"
                     Grid.Column="0"
-                    Padding="50,10,0,0">
+                    Padding="30,10,0,0">
 
-            <Label Text="HEIGHT"/>
+            <Label Text="HEIGHT" FontSize="16"/>
 
 
             <StackLayout
                         Orientation="Horizontal">
 
              <Label Text="6" 
-                    FontSize="24" 
+                    FontSize="26" 
                             FontAttributes="Bold"
                     TextColor="#051C2D"/>
 
                         <Label Text="FT" 
-                    FontSize="24" 
+                    FontSize="26" 
                     TextColor="#051C2D"/>
 
                         <Label Text="2" 
                             FontAttributes="Bold"
-                    FontSize="24" 
+                    FontSize="26" 
                     TextColor="#051C2D"/>
 
                         <Label Text="IN" 
-                    FontSize="24" 
+                    FontSize="26" 
                     TextColor="#051C2D"/>
                         
 
             </StackLayout>
                     
-            <Label Text="/ 1.88m" FontSize="14" TextColor="#051C2D"/>
+            <Label Text="/ 1.88m" FontSize="16" TextColor="#051C2D"/>
                     
         </StackLayout>
 
@@ -206,24 +221,24 @@
                     VerticalOptions="FillAndExpand"
                     Grid.Row="0"
                     Grid.Column="1"
-                    Padding="50,10,0,0">
+                    Padding="30,10,0,0">
                     
-            <Label Text="WEIGHT"/>
+            <Label Text="WEIGHT" FontSize="16"/>
 
                     <StackLayout Orientation="Horizontal">
 
-                        <Label Text="200" FontSize="24" TextColor="#051C2D" FontAttributes="Bold"/>
-                        <Label Text="lbs" FontSize="24" TextColor="#051C2D"/>
+                        <Label Text="200" FontSize="26" TextColor="#051C2D" FontAttributes="Bold"/>
+                        <Label Text="lbs" FontSize="26" TextColor="#051C2D"/>
                         
                         
                     </StackLayout>
                         
-            <Label Text="/ 90.7 kg" FontSize="14" TextColor="#051C2D"/>
+            <Label Text="/ 90.7 kg" FontSize="16" TextColor="#051C2D"/>
                     
         </StackLayout>
     </Grid>
 
-    <components:CuadraLayout
+    <!--<components:CuadraLayout
                 Source="{Binding PlayerData}">
 
           <Grid.ColumnDefinitions>
@@ -236,23 +251,138 @@
                         <views:SimpleRowLayout/>
             </DataTemplate>
         </components:CuadraLayout.Template>
-    </components:CuadraLayout>
+    </components:CuadraLayout>-->
+            
+            <Grid
+                BackgroundColor="White"
+        Padding="30,20,0,0"
+                RowSpacing="20"
+        HorizontalOptions="FillAndExpand">
 
-	<BoxView
-		HorizontalOptions="FillAndExpand"
-		HeightRequest="200"
-		Color="White"/>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="20" />
+      </Grid.RowDefinitions>
+                
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="160" />
+        <ColumnDefinition Width="200" />
+      </Grid.ColumnDefinitions>
 
-	<BoxView
-		HorizontalOptions="FillAndExpand"
-		HeightRequest="200"
-		Color="White"/>
+        <Label Text="BORN" TextColor="Gray" FontSize="16" Grid.Row="0" Grid.Column="0"/>
+        <Label Text="12/09/1991" TextColor="#051C2D" FontSize="16" Grid.Row="0" Grid.Column="1"/>
 
-	<BoxView
-		HorizontalOptions="FillAndExpand"
-		HeightRequest="200"
-		Color="White"/>
+        <Label Text="AGE" TextColor="Gray" FontSize="16" Grid.Row="1" Grid.Column="0"/>
+        <Label Text="25" TextColor="#051C2D" FontSize="16" Grid.Row="1" Grid.Column="1"/>
 
+        <Label Text="FROM" TextColor="Gray" FontSize="16" Grid.Row="2" Grid.Column="0"/>
+        <Label Text="St. Joseph's (PA)" TextColor="#051C2D" FontSize="16" Grid.Row="2" Grid.Column="1"/>
+
+        <Label Text="DRAFT" TextColor="Gray" FontSize="16" Grid.Row="3" Grid.Column="0"/>
+        <Label Text="Undrafted" TextColor="#051C2D" FontSize="16" Grid.Row="3" Grid.Column="1"/>
+
+        <Label Text="NBA DEBUT" TextColor="Gray" FontSize="16" Grid.Row="4" Grid.Column="0"/>
+        <Label Text="2014" TextColor="#051C2D" FontSize="16" Grid.Row="4" Grid.Column="1"/>
+
+        <Label Text="YEARS IN NBA" TextColor="Gray" FontSize="16" Grid.Row="5" Grid.Column="0"/>
+        <Label Text="2" TextColor="#051C2D" FontSize="16" Grid.Row="5" Grid.Column="1"/>
+
+        <Label Text="PREVIOUSLY" TextColor="Gray" FontSize="16" Grid.Row="6" Grid.Column="0"/>
+
+        <StackLayout Grid.Row="6" Grid.Column="1" Grid.RowSpan="3">
+
+        <Label Text="NYK 2014- 2015" TextColor="#051C2D" FontSize="16" />
+        <Label Text="NOP 2016-2016" TextColor="#051C2D" FontSize="16" />
+        <Label Text="SAC 2016-2016" TextColor="#051C2D" FontSize="16" />
+                    
+        </StackLayout>
+                
+
+    </Grid>
+
+	<Grid
+                Margin="0,20,0,0"
+                BackgroundColor="White"
+        Padding="30,20,0,0"
+                RowSpacing="20"
+        HorizontalOptions="FillAndExpand">
+
+      <Grid.RowDefinitions>
+        <!--<RowDefinition Height="20" />-->
+      </Grid.RowDefinitions>
+                
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+
+            <Label Text="PREVIOUS 3 GAMES"
+                FontSize="30"
+                TextColor="#051C2D"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                Grid.ColumnSpan="5"
+                Grid.Column="0"/>
+
+            <Label Text="DATE" Grid.Row="1" Grid.Column="0"/>
+
+            <Label Text="OPPONENT" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Text="RESULT" Grid.Row="1" Grid.Column="2"/>
+
+            <Label Text="PTS" Grid.Row="1" Grid.Column="3"/>
+
+            <Label Text="REB" Grid.Row="1" Grid.Column="4"/>
+
+            <Label Text="AST" Grid.Row="1" Grid.Column="5"/>
+
+            <!---->
+
+            <Label Text="April 12" Grid.Row="2" Grid.Column="0"/>
+
+            <Label Text="at LAC" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Text="L 95 - 115" Grid.Row="2" Grid.Column="2"/>
+
+            <Label Text="14" Grid.Row="2" Grid.Column="3"/>
+
+            <Label Text="4" Grid.Row="2" Grid.Column="4"/>
+
+            <Label Text="6" Grid.Row="2" Grid.Column="5"/>
+
+            <!---->
+
+            <Label Text="April 11" Grid.Row="3" Grid.Column="0"/>
+
+            <Label Text="PHX" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Text="W 104-129" Grid.Row="3" Grid.Column="2"/>
+
+            <Label Text="4" Grid.Row="3" Grid.Column="3"/>
+
+            <Label Text="2" Grid.Row="3" Grid.Column="4"/>
+
+            <Label Text="2" Grid.Row="3" Grid.Column="5"/>
+
+            <!---->
+
+            <Label Text="April 09" Grid.Row="4" Grid.Column="0"/>
+
+            <Label Text="HOU" Grid.Row="4" Grid.Column="1"/>
+
+            <Label Text="L 135 - 128" Grid.Row="4" Grid.Column="2"/>
+
+            <Label Text="10" Grid.Row="4" Grid.Column="3"/>
+
+            <Label Text="2" Grid.Row="4" Grid.Column="4"/>
+
+            <Label Text="3" Grid.Row="4" Grid.Column="5"/>
+
+    </Grid>
+      
 	</StackLayout>
 
 	</ScrollView>
