@@ -155,18 +155,18 @@
  
     <StackLayout BackgroundColor="White">
 
-        <Image Source="http://i2.cdn.turner.com/money/dam/assets/151223011223-nesquik-ad-780x439.jpg"
+        <Image Source="http://www.prodesign.lt/wp-content/uploads/2011/08/Coca-Cola_istorija_1994-1.jpg"
             HorizontalOptions="FillAndExpand"
             Aspect="Fill"
             Margin="30"
-            HeightRequest="60"/>
+            HeightRequest="100"/>
 
     </StackLayout>
 
             
 	<Grid
-                BackgroundColor="White"
-        Padding="0,40,0,0"
+        BackgroundColor="White"
+        Padding="0,0,0,0"
 		HorizontalOptions="FillAndExpand">
 
       <Grid.RowDefinitions>
@@ -316,7 +316,7 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
 
             <Label Text="PREVIOUS 3 GAMES"
