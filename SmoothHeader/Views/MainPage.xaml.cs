@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Behaviors;
+using Xamarin.Forms;
 
 namespace SmoothHeader.Views
 {
@@ -7,6 +8,8 @@ namespace SmoothHeader.Views
 		public MainPage()
 		{
 			InitializeComponent();
+
+            //PlayerImage.Behaviors.Add(new SwipeViewAutomaticallyBehavior());
 		}
 	}
 }

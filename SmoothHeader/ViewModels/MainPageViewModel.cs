@@ -48,17 +48,17 @@ namespace SmoothHeader.ViewModels
 
             PlayerName = "Kevin Durant";
 
-            PlayerData = new List<string>
-            {
-                "Born",
-                "12/09/2001",
-                "Age",
-                "25",
-                "From",
-                "Draft",
-                "Nba Debut",
-                "2014"
-            };
+            //PlayerData = new List<string>
+            //{
+            //    "Born",
+            //    "12/09/2001",
+            //    "Age",
+            //    "25",
+            //    "From",
+            //    "Draft",
+            //    "Nba Debut",
+            //    "2014"
+            //};
         }
 
 		public void OnNavigatingTo(NavigationParameters parameters)

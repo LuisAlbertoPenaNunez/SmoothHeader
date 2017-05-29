@@ -25,6 +25,7 @@
 		<StackLayout HorizontalOptions="Start" Padding="20,0,0,0">
 
 			<Image
+                x:Name="PlayerImage"
 				Source="{Binding PlayerImage}"
 				HorizontalOptions="Fill"
 				HeightRequest="120"
